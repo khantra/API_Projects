@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<header>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"><script src="
+https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.js"></script>
+<style>
+.CalcApp,.InOut, .buttongroup{
+border:1px solid darkgray;
+}
+.result,.inputwrapper{
+border-bottom:1px solid darkgray;
+padding: 1%;
+margin-bottom: 0;
+}
+.result, .N_first,.N_second{
+min-height: 8.5rem;
+width: 100%;
+font-size: 3.25rem;
+background-color: #dedede;
+border-color: whitesmoke;
+text-align: center;
+border-style: double;
+border-width: .5rem;
+border-bottom-color: darkgray;
+color: black;
+}
+.N_first,.N_second{
+background-color: #dedede;
+color: black;
+border-color: white;
+}
+.buttongroup button{
+padding: 3.25%;
+font-size: 3.25rem;
+background-image: none;
+background-color: darkgray;
+border: 0;
+border-bottom: 1px solid white;
+border-right: 1px solid white;
+border-top: 1px solid white;
+color: white;
+}
+</style>
+</header>
+<body>
+
+<div class="container CalcApp" data-ng-app="CalculatorApp" ng-controller="CalcCtrl" >
+<div class="row InOut">
+	<p ng-bind="result" class="col-xs-12 result"></p>
+	
+	<p class="col-xs-6 inputwrapper"><input type="number" class="N_first" ng-model="N_first"></p>
+	<p class="col-xs-6 inputwrapper"><input type="number" class="N_second" ng-model="N_second"></p>
+
+</div>
+	<div class="buttongroup row">
+	<button class="col-xs-6" ng-click="add()">+</button>
+	<button  class="col-xs-6" ng-click="sub()">-</button>
+	<button class="col-xs-6"  ng-click="mult()">*</button>
+	<button class="col-xs-6"  ng-click="divide()">/</button>
+	<button class="col-xs-6"  ng-click="mod()">%</button>
+	<button class="col-xs-6"  ng-click="operate()">=</button>
+	</div>
+
+  
+ <!-- 
+ 
+ <p>{{ result() }}</p>
+
+ -->
+	
+
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+//define Angular APP
+var app = angular.module('CalculatorApp', []);
+
+//DEfine Controller for app. $scope is the application object (the owner of application variables and functions)- w3 schools
+app.controller('CalcCtrl', function($scope) {
+var operator;
+//call function as a variable into. Variable is stored in $scope as 
+	$scope.add= function(){
+		operator="+";
+	}
+	$scope.sub= function(){
+		operator="-";
+	}
+	$scope.mult= function(){
+		operator="*";
+	}
+	$scope.divide= function(){
+		operator="/";
+	}
+	$scope.mod= function(){
+		operator="%";
+	}		
+	$scope.operate= function(){
+	if (operator == '+') {
+        $scope.result= $scope.N_first + $scope.N_second;
+			}
+	if (operator == '-') {
+        $scope.result= $scope.N_first - $scope.N_second;
+			}
+	if (operator == '*') {
+        $scope.result= $scope.N_first * $scope.N_second;
+			}
+	if (operator == '/') {
+        $scope.result= $scope.N_first / $scope.N_second;
+            }	
+	if (operator == '%') {
+        $scope.result= $scope.N_first % $scope.N_second;
+            }	
+	}
+   
+});
+</script>
+
+</body>
+</html>

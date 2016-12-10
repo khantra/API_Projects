@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<header>
+<link href="style.css"  type="text/css" />
+<link href="style.less" rel="stylesheet/less" type="text/css"/>
+<script src="
+https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.js"></script>
+<style>
+body, div{padding:0; margin:0;}
+.container{
+    display: -webkit-flex;
+    display: flex;	
+	margin: 0 5%;
+}
+.container-fluid{
+    display: -webkit-flex;
+    display: flex;	
+	margin: 0 ;
+	width:100%;
+}
+.container-item {
+    width: 100px;
+}
+</style>
+</header>
+<body>
+
+<div class="container-fluid" data-ng-app="myApp" ng-controller="myCtrl" >
+<h1>Color</h1>
+ <ul>
+        <li ng-repeat="x in eventsmade">{{x}} <span ng-click="removeItem($index)">&times;</span></li>
+    </ul>
+ 	 <div>	
+     <strong ng-bind="title"> </strong>
+     <small ng-bind="selectedName"> </small> 
+     <p><strong> Description </strong></p>
+     <p ng-bind="description"> </p>
+     <p ng-bind="npoints"> </p>
+     <p ng-bind="setsnreps"> </p>
+     </div>
+     
+        <p>Title <input type="text" ng-model="title">
+         <select  ng-model="selectedName" ng-options="x for x in names">
+		</select></p>
+        
+<select  ng-model="setsnreps" >
+<option value="Sets and Reps"> Sets and Reps</option>
+<option ng-repeat="(sets,xreps) in nreps" value="{{sets}} Reps:{{xreps}}"> Sets:{{sets}} Reps:{{xreps}}</option>
+</select>
+
+<select  ng-model="npoints"   >
+<option ng-repeat="x in points" > Points:{{x}}</option>
+</select>
+
+
+      <textarea rows="4" cols="50" ng-model="description">
+At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. 
+</textarea>
+ 
+    <button ng-click="addItem()">Add</button>
+    
+    <!-- 
+	<p>The name is <span data-ng-bind="firstName"></span></p>
+	<p>My first expression: {{ 5 + 5 }}</p>
+	First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+</div>
+-->
+<script>
+var app = angular.module('myApp', []);
+var m = {
+    "3": "5",
+    "4": "10",
+    "10": "5",
+    "7": " 5",
+    "2": "7",
+    "8": "10",
+};
+
+app.controller('myCtrl', function($scope) {
+     $scope.names = ["Fitness", "Programming", "Travel"];
+	 $scope.nreps = m;
+	 $scope.points=["5", "20", "0", "150"];
+	$scope.firstName= "John";
+    $scope.lastName= "Doe";
+	$scope.eventsmade=[];
+	$scope.addItem = function () {
+		if($scope.eventsmade.indexOf( $scope.addMe)==-1)
+        $scope.eventsmade.push($scope.title);
+    } ;
+	 $scope.removeItem = function (x) {
+		 
+        $scope.eventsmade.splice(x, 1);
+    } 
+});
+</script>
+
+</body>
+</html>

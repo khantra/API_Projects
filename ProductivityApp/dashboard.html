@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<header>
+<link rel="stylesheet" href="style.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"><script src="
+https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.js"></script>
+<style>
+
+	</style>
+</header>
+<body>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+	  <!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Historian</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Post <span class="sr-only">(current)</span></a></li>
+				<li><a href="#">Reader</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Post-Apocalyptic Fiction</a></li>
+						<li><a href="#">Science Fiction</a></li>
+						<li><a href="#">Film Noir</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Video Games</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Books</a></li>
+						<li><a href="#">Films</a></li>
+						<li><a href="#">Video Games</a></li>
+					</ul>
+				</li>
+			</ul>
+			<form class="navbar-form navbar-left">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Notifications <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Post-Apocalyptic Fiction</a></li>
+						<li><a href="#">Science Fiction</a></li>
+						<li><a href="#">Film Noir</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Video Games</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Books</a></li>
+						<li><a href="#">Films</a></li>
+						<li><a href="#">Video Games</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Account</a></li>
+						<li><a href="#"> Connect to Facebook</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+
+
+
+<div class="container-fluid  " > <!-- /App container-fluid  start -->
+
+
+
+<div class="row "> <!-- /InnerWrapper start -->
+
+	<div class="sidebar col-xs-2"><!-- /Sidebar Start -->
+		<div class=" row first-module"><!-- /Module Start -->
+			<div class="input-group"> <input class="form-control" placeholder="Search for...">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">Go!</button>
+				</span> 
+			</div>
+		</div>
+		<div class=" module"><!-- /Module Start -->		
+			<ul class="nav nav-pills nav-stacked">
+				<li class="lead"><a href="#">App Navigation</a></li>		
+				<li><a href="#">Username</a></li>
+				<li><a href="#">Username</a></li>
+				<li><a href="#">Username</a></li>
+			</ul>
+		</div><!-- /Module end -->
+		<div class=" module"><!-- /Module Start -->
+			<ul class="nav nav-pills nav-stacked">
+				<li><a href="#">Username</a></li>
+				<li><a href="#">Username</a></li>
+				<li><a href="#">Username</a></li>
+			</ul>
+		</div><!-- /Module end -->
+	</div>	<!-- /Sidebar end -->
+	<div class="main col-xs-8"><!-- /main Start -->
+		<div class="row listing"><!-- /listing Start -->
+			<ol class="breadcrumb">
+				<li><a href="#">Goals</a></li>
+			</ol>
+			<div class="col-xs-12 Goal-listing">
+				<div class="thumbnail">
+					<div class="caption">
+						<h3>Thumbnail label</h3>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">   70%
+							</div>
+						</div>	
+						<p>...</p>
+						<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-default">Read Review</button>
+							<button type="button" class="btn btn-default">News</button>
+							<div class="btn-group" role="group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Dropdown<span class="caret"></span></button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Dropdown link</a></li>
+									<li><a href="#">Dropdown link</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- /listing end -->
+		<div class="row listing"><!-- /listing Start -->
+			<ol class="breadcrumb">
+				<li><a href="#">Tips</a></li>
+			</ol>
+			<div class="col-xs-12 tips-listing">
+				<div class="thumbnail">
+				<div class="caption">
+						<h3>Thumbnail label</h3>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">   70%
+							</div>
+						</div>	
+						<p>...</p>
+						<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-default">Read Review</button>
+							<button type="button" class="btn btn-default">News</button>
+							<div class="btn-group" role="group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Dropdown<span class="caret"></span></button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Dropdown link</a></li>
+									<li><a href="#">Dropdown link</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 book-listing">
+				<div class="thumbnail">
+					<div class="caption">
+						<h3>Thumbnail label</h3>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">   70%
+							</div>
+						</div>	
+						<p>...</p>
+						<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-default">Read Review</button>
+							<button type="button" class="btn btn-default">News</button>
+							<div class="btn-group" role="group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Dropdown<span class="caret"></span></button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Dropdown link</a></li>
+									<li><a href="#">Dropdown link</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- /listing end -->
+		<div class="row listing"><!-- /listing Start -->
+			<ol class="breadcrumb">
+				<li><a href="#">Recommendations</a></li>
+			</ol>
+			<div class="col-xs-12 Recommendations-listing">
+				<div class="thumbnail">
+					<div class="caption">
+						<h3>Thumbnail label</h3>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">   70%
+							</div>
+						</div>	
+						<p>...</p>
+						<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-default">Read Review</button>
+							<button type="button" class="btn btn-default">News</button>
+							<div class="btn-group" role="group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Dropdown<span class="caret"></span></button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Dropdown link</a></li>
+									<li><a href="#">Dropdown link</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- /listing end -->
+	</div>	<!-- /main end -->
+	<div class="sidebar col-xs-2"><!-- /Sidebar Start -->
+		<div class=" row first-module lead"><!-- /Module Start -->
+			Title
+		</div>
+	<div class=" module"><!-- /Module Start -->		
+			<ul class="nav nav-pills nav-stacked">
+				<li class="lead"><a href="#">Notifications</a></li>		
+				<li><a href="#">Username</a></li>
+				<li><a href="#">Username</a></li>
+				<li><a href="#">Username</a></li>
+			</ul>
+		</div><!-- /Module end -->
+		<div class=" module"><!-- /Module Start -->
+			<ul class="nav nav-pills nav-stacked">
+				<li><a href="#">Username</a></li>
+				<li><a href="#">Username</a></li>
+				<li><a href="#">Username</a></li>
+			</ul>
+		</div><!-- /Module end -->
+		<div class=" module"><!-- /Module Start -->
+			<ul class="nav nav-pills nav-stacked online">
+				<li class="lead"><a href="#">User</a> <small> Some Activity</small></li>
+				<li class="lead"><a href="#">User</a><small> Some Activity</small></li>
+				<li class="lead"><a href="#">User</a><small> Some Activity</small></li>
+			</ul>
+		</div><!-- /Module end -->
+	</div>	<!-- /Sidebar end -->
+</div> <!-- /InnerWrapper End -->
+	
+</div> <!-- /App container-fluid  Finish -->
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+//define Angular APP
+var app = angular.module('CalculatorApp', []);
+
+//DEfine Controller for app. $scope is the application object (the owner of application variables and functions)- w3 schools
+app.controller('CalcCtrl', function($scope) {
+var operator;
+//call function as a variable into. Variable is stored in $scope as 
+	$scope.add= function(){
+		operator="+";
+	}
+	$scope.sub= function(){
+		operator="-";
+	}
+	$scope.mult= function(){
+		operator="*";
+	}
+	$scope.divide= function(){
+		operator="/";
+	}
+	$scope.mod= function(){
+		operator="%";
+	}		
+	$scope.operate= function(){
+	if (operator == '+') {
+        $scope.result= $scope.N_first + $scope.N_second;
+			}
+	if (operator == '-') {
+        $scope.result= $scope.N_first - $scope.N_second;
+			}
+	if (operator == '*') {
+        $scope.result= $scope.N_first * $scope.N_second;
+			}
+	if (operator == '/') {
+        $scope.result= $scope.N_first / $scope.N_second;
+            }	
+	if (operator == '%') {
+        $scope.result= $scope.N_first % $scope.N_second;
+            }	
+	}
+   
+});
+</script>
+
+</body>
+</html>
